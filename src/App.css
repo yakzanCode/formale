@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+}
+
+
+/***** NAVBAR *****/
+.nav-item span {
+  position: relative;
+  display: inline-block; /* underline matches text width */
+}
+
+.nav-item span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 95%;
+  height: 2px;
+  z-index: 50;
+  background-color: black;
+  transform: translateX(-50%) scaleX(0); /* start hidden, center origin */
+  transform-origin: center; /* grow from the center */
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover span::after,
+.nav-item:focus span::after {
+  transform: translateX(-50%) scaleX(1);
+}
+.nav-item:hover span,
+.nav-item:focus span {
+  color: #535351;
+}
+
+
+.custom-dropdown {
+  position: relative;
+  display: flex;
+}
+
+.custom-dropdown .custom-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin: 0 auto;
+  padding: 12px 8px;
+  border: 0;
+  border-radius: 0;
+  background-color: #d6d2c4;
+  width: 50%;
+}
+
+.custom-dropdown .custom-dropdown-menu .dropdown-item p {
+  transition: all 0.3s ease;
+}
+
+.custom-dropdown .custom-dropdown-menu .dropdown-item  {
+  background-color: #d6d2c4;
+}
+
+.custom-dropdown:hover .custom-dropdown-menu {
+  display: block;
+}
+
+.custom-dropdown .custom-dropdown-menu .dropdown-item:hover p {
+  transform: translate(5px);
+  color: black;
+}
+
+
+/***** SIDEBAR *****/
+.sidebar-list {
+  list-style: none;
+}
+
+.sidebar-item {
+  display: block;
+  color: #212322;
+  text-decoration: none;
+  transition: transform 0.12s ease, color 0.18s ease;
+}
+
+.sidebar-item:hover,
+.sidebar-item:focus {
+  transform: translateX(4px);
+  color: black;
+}
+
+
+/* .transition {
+  transition: opacity 0.4s ease;
+}
+
+.hover-opacity {
+  opacity: 0;
+}
+
+.card:hover .hover-opacity {
+  opacity: 1 !important;
+}
+
+.card:hover .transition:not(.hover-opacity) {
+  opacity: 0;
+} */
+
+.custom-btn-outline {
+  border: 2px solid #726b52;
+  background-color: transparent;
+  color: #726b52;
+  transition: all 0.3s ease;
+}
+
+.custom-btn-outline:hover {
+  background-color: #726b52;
+  color: #fff;
+}
+
+.custom-btn {
+  border: 2px solid #726b52;
+  background-color: #726b52;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: transparent;
+  color: #d6d2c4;
+}
