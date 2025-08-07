@@ -32,7 +32,7 @@ export async function fetchProducts(categorySlug?: string): Promise<Product[]> {
     priceBeforeSale,
     usage,
     size
-  } | order(isFeatured desc, name asc)`;
+  } | order(name asc)`;
 
   // pass slug param; if undefined pass "all" so query returns everything
   const params = { slug: categorySlug ?? "all" };

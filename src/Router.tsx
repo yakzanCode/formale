@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Home from './pages/Home';
+import Home from './pages/Home';
 import Products from './pages/Products';
 // import Product from './pages/Product';
 import Navbar from './components/Navbar';
@@ -10,6 +10,7 @@ import TermsOfUse from "./pages/Policies/TermsOfUse";
 import ReturnPolicy from "./pages/Policies/ReturnPolicy";
 import ShippingPolicy from "./pages/Policies/ShippingPolicy";
 import Disclaimer from "./pages/Policies/Disclaimer";
+import ScrollToTop from './components/ScrollTop';
 
 const AppRouter = () => {
   return (
@@ -17,7 +18,7 @@ const AppRouter = () => {
       <PromoBar />
       <Navbar />
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/" element={<Home />} />
           <Route path="/collections/all" element={<Products />} />
           <Route path="/collections/:slug" element={<Products />} />
           {/* <Route path="/products/:slug" element={<Product />} /> */}
@@ -27,6 +28,7 @@ const AppRouter = () => {
           <Route path="/shipping-policy" element={<ShippingPolicy />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
         </Routes>
+      <ScrollToTop />
       <Footer />
     </Router>
   );
