@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { fetchCategories, urlFor } from "../lib/sanity";
+import { Link } from "react-router-dom";
+import { fetchCategories } from "../lib/sanity";
 import type { Category } from "../models/Category";
 
 const Navbar: React.FC = () => {
   const [categories, setCategories] = useState<Category[]>([]);
-  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => setIsOpen(!isOpen);

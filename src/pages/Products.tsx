@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import { fetchProducts } from "../lib/sanity";
 import type { Product } from "../models/Product";
