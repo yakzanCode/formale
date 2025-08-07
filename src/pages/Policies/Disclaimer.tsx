@@ -1,6 +1,3 @@
-// Disclaimer.tsx
-import React from 'react';
-
 const Disclaimer = () => {
   return (
     <div className="container py-5">

@@ -1,5 +1,3 @@
-// ReturnPolicy.tsx
-import React from 'react';
 
 const ReturnPolicy = () => {
   return (

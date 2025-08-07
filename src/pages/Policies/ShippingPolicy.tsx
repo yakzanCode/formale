@@ -1,5 +1,3 @@
-// ShippingPolicy.tsx
-import React from 'react';
 
 const ShippingPolicy = () => {
   return (

@@ -1,6 +1,3 @@
-// Accessibility.tsx
-import React from 'react';
-
 const Accessibility = () => {
   return (
     <div className="container py-5">
