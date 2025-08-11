@@ -167,7 +167,7 @@ export default function Products() {
       {/* Product Grid */}
       <section className="row g-3">
         {filteredAndSortedProducts.map((product) => (
-          <div className="col-12 col-sm-6 col-md-4 col-xl-3" key={product._id}>
+          <div className="col-6 col-md-4 col-xl-3" key={product._id}>
             <ProductCard product={product} />
           </div>
         ))}
