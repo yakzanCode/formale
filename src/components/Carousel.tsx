@@ -1,3 +1,4 @@
+// Carousel.tsx
 import React, { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import type { Product } from "../models/Product";

@@ -1,4 +1,4 @@
-
+// models/ProductCard.ts
 export interface Product {
   _id: string;
   name: string;
@@ -21,10 +21,14 @@ export interface Product {
 // my-shop/
 // │── src/
 // │   ├── components/
+// │   │   └── Carousel.tsx
 // │   │   └── Footer.tsx
 // │   │   └── Navbar.tsx
 // │   │   └── ProductCard.tsx
-// │   │   └── Sidebar.tsx
+// │   │   └── ProductHighlights.tsx
+// │   │   └── Promobar.tsx
+// │   │   └── ScrollTop.tsx
+// │   │   └── StarRating.tsx
 // │   ├── lib/
 // │   │   └── sanity.ts
 // │   ├── models/
@@ -34,8 +38,30 @@ export interface Product {
 // │   │   └── Home.tsx
 // │   │   └── Product.tsx
 // │   │   └── Products.tsx
+// │   │   ├── Policies/
+// │   │   │   └── PrivacyPolicy.tsx
+// │   │   │   └── Disclaimer.tsx
+// │   │   │   └── Accessibility.tsx
+// │   │   │   └── ReturnPolicy.tsx
+// │   │   │   └── Shipping.tsx
+// │   │   │   └── TemrsOfUse.tsx
+// │   ├── App.css
 // │   ├── App.tsx
-// │   └── main.tsx
+// │   ├── index.css
+// │   ├── main.tsx
+// │   ├── Router.tsx
+// │   ├── vite-env.d.ts
+// │── dist/
+// │   └──index.html
+// │   └── assets/
+// │   └── vite.svg
+// │── node_modules/
+// │── public/
+
+
+
+
+
 
 
 

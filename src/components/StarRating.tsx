@@ -9,12 +9,12 @@ const StarRating: React.FC<{ rating?: number; max?: number }> = ({ rating = 0, m
 
   for (let i = 0; i < full; i++) {
     stars.push(
-      <i key={`full-${i}`} className="bi bi-star-fill text-dark me-1" aria-hidden />
+      <i key={`full-${i}`} className="bi bi-star-fill me-1" aria-hidden />
     );
   }
   if (hasHalf) {
     stars.push(
-      <i key="half" className="bi bi-star-half text-dark me-1" aria-hidden />
+      <i key="half" className="bi bi-star-half me-1" aria-hidden />
     );
   }
   for (let i = 0; i < empty; i++) {
@@ -24,7 +24,7 @@ const StarRating: React.FC<{ rating?: number; max?: number }> = ({ rating = 0, m
   }
 
   return (
-    <div className="d-inline-flex align-items-center" aria-label={`Rated ${rating} out of ${max}`} style={{fontSize: "12px"}}>
+    <div className="d-inline-flex align-items-center m-0 p-0" aria-label={`Rated ${rating} out of ${max}`}>
       {stars}
       <span className="visually-hidden">{rating} out of {max} stars</span>
     </div>

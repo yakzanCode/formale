@@ -1,3 +1,4 @@
+// Products.tsx
 import { useEffect, useState, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import { fetchProducts } from "../lib/sanity";

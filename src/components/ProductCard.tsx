@@ -1,3 +1,4 @@
+// ProductCard.tsx
 import React, { useState } from "react";
 import { urlFor } from "../lib/sanity";
 import type { Product } from "../models/Product";
