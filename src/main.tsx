@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { CartProvider } from './contexts/CartContext.tsx';
 import './index.css'
 import App from './App.tsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,6 +11,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <CartProvider>
+      <App />
+    </CartProvider>
   </StrictMode>,
 )

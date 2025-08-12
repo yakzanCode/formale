@@ -1,18 +1,24 @@
 // Navbar.tsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { fetchCategories } from "../lib/sanity";
 import type { Category } from "../models/Category";
+import { CartContext } from "../contexts/CartContext";
+import type { Product } from "../models/Product";
 
 const Navbar: React.FC = () => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const { cartItems } = useContext(CartContext);
 
+  const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const toggleCollapse = () => setIsOpen(!isOpen);
 
   useEffect(() => {
     fetchCategories().then(setCategories).catch(console.error);
   }, []);
+
 
   return (
     <>
@@ -22,11 +28,11 @@ const Navbar: React.FC = () => {
             <span className="col-2 col-md-1 d-flex">
               <i className="bi bi-list d-md-none fs-1 my-auto" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></i>
             </span>
-            <Link className="navbar-brand col-8 col-md-10 m-0 d-inline-flex justify-content-center fw-bold" style={{ fontSize: "40px" }} to="/"><span>FORMALE</span><span style={{fontSize: "6px", marginTop: "15px"}}>TM</span></Link>
+            <Link className="navbar-brand col-8 col-md-10 m-0 d-inline-flex justify-content-center fw-bold" style={{ fontSize: "40px", color: "rgba(56, 39, 31, 1)"}} to="/"><span>FORMALE</span><span style={{fontSize: "6px", marginTop: "15px"}}>TM</span></Link>
             <span className="col-2 col-md-1 d-flex justify-content-between">
               <i className="bi bi-cart fs-5 my-auto position-relative">
                 <div className="rounded-circle bg-dark d-flex position-absolute top-0 start-50" style={{ width: "16px", height: "16px", fontSize: "11px" }}>
-                  <span className="mx-auto text-light">0</span>
+                  <span className="mx-auto text-light">{totalQuantity}</span>
                 </div>
               </i>
               <i className="bi bi-search fs-5 my-auto"></i>
@@ -62,7 +68,7 @@ const Navbar: React.FC = () => {
 
       <div className="offcanvas offcanvas-start bg-light-subtle px-4" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div className="offcanvas-header">
-          <Link className="offcanvas-title text-decoration-none text-dark fw-bold d-inline-flex" style={{ fontSize: "40px" }} to="/">FORMALE<span className="fs-6 mt-2">&reg;</span></Link>
+          <Link className="offcanvas-title text-decoration-none fw-bold d-inline-flex" style={{ fontSize: "40px", color: "rgba(56, 39, 31, 1)"}} to="/">FORMALE<span className="fs-6 mt-2">&reg;</span></Link>
           <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body">

@@ -11,6 +11,7 @@ import ReturnPolicy from "./pages/Policies/ReturnPolicy";
 import ShippingPolicy from "./pages/Policies/ShippingPolicy";
 import Disclaimer from "./pages/Policies/Disclaimer";
 import ScrollToTop from './components/ScrollTop';
+import Cart from './pages/Cart';
 
 const AppRouter = () => {
   return (
@@ -19,6 +20,7 @@ const AppRouter = () => {
       <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/collections/all" element={<Products />} />
           <Route path="/collections/:slug" element={<Products />} />
           <Route path="/products/:slug" element={<Product />} />

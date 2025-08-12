@@ -82,7 +82,7 @@ export default function Products() {
 
   return (
     <main className="container-fluid p-3">
-      <h1 className="fw-bold fs-3 text-center">{heading}</h1>
+      <h1 className="fw-bold fs-3 text-center" style={{color: "rgba(56, 39, 31, 1)"}}>{heading}</h1>
       <div className="mx-auto mb-5 mt-3 bg-warning pt-1" style={{ width: "70px" }}></div>
 
       <div className="d-flex">
